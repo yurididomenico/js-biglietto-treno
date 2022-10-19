@@ -6,7 +6,28 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
 va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 
+Sottoproblemi
+{
+    -n° km
+    -età
+    -costante 0.21 €/km
+    -Minorenni
+    {
+        20% Sconto
+    }
+    -Maggiorenni
+    {
+        Nessuno sconto :'(
+    }
+    -Over 65
+    {
+        40% Sconto
+    }
+}
+    
+
 */
+
 
 
 
