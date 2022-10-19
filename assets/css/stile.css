@@ -19,13 +19,27 @@ a
   color: black;
 }
 /* |||||||||| INIZIO |||||||||| */
-
+.personal-bg-yellow
+{
+  background-color: #f1d879;
+}
+.personal-border-yellow
+{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cdb44f;
+}
+.personal-width-
+{
+  width: 170px;
+}
 
 /* |||||||||| HEADER |||||||||| */
 header
 {
   background-color: rgb(243, 217, 113);
   padding: 10px;
+  box-shadow: 2px 0 20px rgb(0, 0, 0) ;
 }
 header h2
 {
@@ -58,6 +72,18 @@ main
 .form label
 {
   font-weight: bold;
+}
+
+.immagini img
+{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.immagini div
+{
+  
 }
 
 /* |||||||||| FOOTER |||||||||| */

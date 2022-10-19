@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YDD - JS </title>
   <!-- [______Collegamento Bootstrap__________________________________________] -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <!-- [______Collegamento Font__________________________________________] -->
   <script src="https://kit.fontawesome.com/f4affba74f.js" crossorigin="anonymous"></script>
   <!-- [______Collegamento CSS_____________________________________________] -->
@@ -15,7 +16,7 @@
   <link rel="stylesheet" href="./assets/css/flex.css">
   <!-- [______Favicon______________________________________________________] -->
   <link rel="icon" type="image/x-icon" href="./assets/img/favYconStatic.ico">
-  
+
 </head>
 
 <body>
@@ -25,29 +26,53 @@
   </header>
 
   <main>
-    <div class="form">
-      <h4>Tariffa per chilometro: 0.21 <i class='fas fa-euro-sign'></i>/Km</h4>
-      <form action="">
-        <label for="numeroChilometri">Numero Chilometri da percorrere:</label>          
-        <input type="text" id="numeroChilometri" placeholder="Numero Km...">
+    <div class="d-flex p-5">
+      <!-- ----- FORM ----------------------------- -->
+      <div class="form me-2">
+        <h2 class="border p-2">Ordina il tuo biglietto online! </h2>
+        <h4 class="p-2">Tariffa per chilometro: 0.21 <i class='fas fa-euro-sign'></i>/Km</h4>
+        <form action="" class="p-2">
+          <label for="numeroChilometri">Numero Chilometri da percorrere:</label>
+          <input type="text" id="numeroChilometri" placeholder="Distanza (Km)">
 
-        <label for="EtaPasseggero">Età del passeggero:</label>
-        <input type="text" id="etaPasseggero" placeholder="Età...">
+          <label for="EtaPasseggero">Età del passeggero:</label>
+          <input type="text" id="etaPasseggero" placeholder="Età">
 
-        <button onclick="calcoloPagamento(); return false">
-          Vai al Pagamento
-        </button>
-        
-      </form>
-    </div>  
+          <button onclick="calcoloPagamento(); return false"
+            class="p-2 rounded personal-bg-yellow personal-border-yellow">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-cart-shopping fs-2"></i>
+          </button>
 
-    <div>
-      <h5 id="risultatoPrezzo"></h5>
+        </form>
+      </div>
+
+      <!-- ----- IMMAGINI ----------------------------- -->
+      <div class="immagini d-flex">
+        <div>
+          <img class="mb-3" src="./assets/img/kid.png" alt="img-kid">
+          <span class="bg-success text-white p-1 rounded-5">Sconto - 20%</span>
+        </div>
+        <div class="ps-3">
+          <img class="mb-3" src="./assets/img/oldwoman.png" alt="img-oldman">
+          <span class="bg-success text-white p-1 rounded-5">Sconto - 40%</span>
+        </div>
+
+      </div>
+
+      <!-- ----- PREZZO CALCOLATO ----------------------------- -->
+      <div class="d-block">
+        <h5 id="risultatoPrezzo"></h5>
+      </div>
     </div>
+
+
   </main>
-  
+
   <script src="./assets/javascript/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
