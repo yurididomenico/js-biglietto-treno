@@ -22,7 +22,15 @@ a
 
 
 /* |||||||||| HEADER |||||||||| */
-
+header
+{
+  background-color: rgb(243, 217, 113);
+  padding: 10px;
+}
+header h2
+{
+  margin: 0;
+}
 
 
 /* |||||||||| NAV |||||||||| */
@@ -31,7 +39,26 @@ a
 
 /* |||||||||| MAIN |||||||||| */
 
+main
+{
+  padding: 20px;
+}
 
+.form
+{
+  border: 2px solid lightgrey;
+}
+
+.form input
+{
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form label
+{
+  font-weight: bold;
+}
 
 /* |||||||||| FOOTER |||||||||| */
 
