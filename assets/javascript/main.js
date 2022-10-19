@@ -26,19 +26,43 @@ Sottoproblemi
 }
     
 */
+let nChilometri = 101;
+let etaPasseggero = 15;
+let prezzoBiglietto = parseFloat(0.21) * nChilometri;
+let sconto;
+let prezzoTotale;
 
-let nChilometri = 10;
-console.log(nChilometri);
+// let prezzoFinale = prezzo - sconto;
+// console.log(prezzoFinale);
 
-let etaPasseggero = 18;
-console.log(etaPasseggero);
+// ________________ Minorenne ________________
+if(etaPasseggero < 18)
+{
+    sconto = prezzoBiglietto * 0.20;
+    // prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
+    prezzoTotale = prezzoBiglietto - sconto;
+}
 
-const prezzoBiglietto = parseFloat(0.21);
-console.log(prezzoBiglietto);
 
-let risultatoPrezzo = nChilometri * prezzoBiglietto;
+// ________________ Maggiorenne ________________
+else if(etaPasseggero >= 65)
+{
+    sconto = prezzoBiglietto * 0.40;
+    prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
+}
 
-document.getElementById('risultatoPrezzo').innerHTML = `Il prezzo è: ${risultatoPrezzo}`
+// ________________ Over 65 ________________
+else
+{
+    prezzoTotale = parseFloat(prezzoBiglietto).toFixed(2);
+}
+
+
+console.log('Prezzo Totale: ' + parseFloat(prezzoTotale).toFixed(2));
+console.log('Prezzo Totale: ' + prezzoTotale);
+
+
+
 
 
 
