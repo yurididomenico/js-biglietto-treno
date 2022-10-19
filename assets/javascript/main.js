@@ -26,8 +26,8 @@ Sottoproblemi
 }
     
 */
-let nChilometri = 101;
-let etaPasseggero = 15;
+let nChilometri = 100;
+let etaPasseggero = 20;
 let prezzoBiglietto = parseFloat(0.21) * nChilometri;
 let sconto;
 let prezzoTotale;
@@ -35,33 +35,29 @@ let prezzoTotale;
 // let prezzoFinale = prezzo - sconto;
 // console.log(prezzoFinale);
 
-// ________________ Minorenne ________________
+// ________________ IF Minorenne ________________
 if(etaPasseggero < 18)
 {
     sconto = prezzoBiglietto * 0.20;
-    // prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
-    prezzoTotale = prezzoBiglietto - sconto;
+    prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
 }
 
 
-// ________________ Maggiorenne ________________
+// ________________ IF Maggiorenne ________________
 else if(etaPasseggero >= 65)
 {
     sconto = prezzoBiglietto * 0.40;
     prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
 }
 
-// ________________ Over 65 ________________
+// ________________ IF Over65 ________________
 else
 {
-    prezzoTotale = parseFloat(prezzoBiglietto).toFixed(2);
+    prezzoTotale = prezzoBiglietto;
 }
 
 
-console.log('Prezzo Totale: ' + parseFloat(prezzoTotale).toFixed(2));
-console.log('Prezzo Totale: ' + prezzoTotale);
-
-
+document.getElementById('risultatoPrezzo').innerHTML = `Prezzo Totale: ${prezzoTotale}`;
 
 
 
