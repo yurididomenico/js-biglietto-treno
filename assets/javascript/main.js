@@ -26,38 +26,38 @@ Sottoproblemi
 }
     
 */
-let nChilometri = 100;
-let etaPasseggero = 20;
-let prezzoBiglietto = parseFloat(0.21) * nChilometri;
-let sconto;
-let prezzoTotale;
 
-// let prezzoFinale = prezzo - sconto;
-// console.log(prezzoFinale);
-
-// ________________ IF Minorenne ________________
-if(etaPasseggero < 18)
+function calcoloPagamento()
 {
-    sconto = prezzoBiglietto * 0.20;
-    prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
+
+    let nChilometri = parseFloat(document.getElementById('numeroChilometri').value);
+    let etaPasseggero = parseFloat(document.getElementById('etaPasseggero').value);
+    let prezzoBiglietto = parseFloat(0.21) * nChilometri;
+    let sconto;
+    let prezzoTotale;
+
+    // ________________ IF Minorenne ________________
+    if(etaPasseggero < 18)
+    {
+        sconto = prezzoBiglietto * 0.20;
+        prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
+    }
+    // ________________ IF Maggiorenne ________________
+    else if(etaPasseggero >= 65)
+    {
+        sconto = prezzoBiglietto * 0.40;
+        prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
+    }
+    // ________________ IF Over65 ________________
+    else
+    {
+        prezzoTotale = prezzoBiglietto;
+    }
+
+    console.log('prezzoTotale')
+    document.getElementById('risultatoPrezzo').innerHTML = `Prezzo Totale: ${prezzoTotale} &euro;`;
+
 }
-
-
-// ________________ IF Maggiorenne ________________
-else if(etaPasseggero >= 65)
-{
-    sconto = prezzoBiglietto * 0.40;
-    prezzoTotale = parseFloat(prezzoBiglietto - sconto).toFixed(2);
-}
-
-// ________________ IF Over65 ________________
-else
-{
-    prezzoTotale = prezzoBiglietto;
-}
-
-
-document.getElementById('risultatoPrezzo').innerHTML = `Prezzo Totale: ${prezzoTotale}`;
 
 
 
