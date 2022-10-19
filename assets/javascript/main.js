@@ -10,7 +10,7 @@ Sottoproblemi
 {
     -n° km
     -età
-    -costante 0.21 €/km
+    -costante prezzo 0.21 €/km
     -Minorenni
     {
         20% Sconto
@@ -25,8 +25,21 @@ Sottoproblemi
     }
 }
     
-
 */
+
+let nChilometri = 10;
+console.log(nChilometri);
+
+let etaPasseggero = 18;
+console.log(etaPasseggero);
+
+const prezzoBiglietto = parseFloat(0.21);
+console.log(prezzoBiglietto);
+
+let risultatoPrezzo = nChilometri * prezzoBiglietto;
+
+document.getElementById('risultatoPrezzo').innerHTML = `Il prezzo è: ${risultatoPrezzo}`
+
 
 
 
